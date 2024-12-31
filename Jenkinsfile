@@ -1,5 +1,5 @@
 pipeline {
-    agent {label: "ansible"}
+    agent any
 
     stages {
         stage('Hello') {
@@ -7,13 +7,11 @@ pipeline {
                 echo 'Hello World'
             }
         }
-         stages {
         stage('test') {
             steps {
                 echo 'Hello test'
             }
         }
-         stages {
         stage('package') {
             steps {
                 echo 'Hello package'
